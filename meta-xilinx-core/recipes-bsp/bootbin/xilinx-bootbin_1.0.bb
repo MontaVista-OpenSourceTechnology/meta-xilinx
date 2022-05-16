@@ -16,6 +16,8 @@ DEPENDS += "bootgen-native"
 # There is no bitstream recipe, so really depend on virtual/bitstream
 DEPENDS += "${@(d.getVar('BIF_PARTITION_ATTR') or "").replace('bitstream', 'virtual/bitstream')}"
 
+do_build[depends] += "${@bb.utils.contains('DEPENDS', 'bitstream', 'virtual/bitstream:do_deploy', '', d)}"
+
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 BIF_FILE_PATH ?= "${B}/bootgen.bif"
