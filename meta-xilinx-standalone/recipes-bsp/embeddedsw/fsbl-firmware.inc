@@ -1,6 +1,6 @@
 DESCRIPTION = "First Stage Bootloader"
 
-inherit xlnx-embeddedsw deploy
+inherit xlnx-embeddedsw deploy nopackages
 
 COMPATIBLE_HOST = ".*-(elf|eabi)"
 COMPATIBLE_MACHINE = "none"

@@ -1,6 +1,6 @@
 DESCRIPTION = "PMU Firmware"
 
-inherit xlnx-embeddedsw deploy
+inherit xlnx-embeddedsw deploy nopackages
 
 COMPATIBLE_HOST = "microblaze.*-elf"
 COMPATIBLE_MACHINE = "none"

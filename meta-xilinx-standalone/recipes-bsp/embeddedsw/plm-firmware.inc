@@ -1,7 +1,7 @@
 DESCRIPTION = "Platform Loader and Manager"
 SUMMARY = "Platform Loader and Manager for Versal devices"
 
-inherit xlnx-embeddedsw deploy
+inherit xlnx-embeddedsw deploy nopackages
 
 COMPATIBLE_HOST = "microblaze.*-elf"
 COMPATIBLE_MACHINE = "none"
